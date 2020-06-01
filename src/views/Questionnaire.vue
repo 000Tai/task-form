@@ -1,6 +1,6 @@
 <template>
-  <div id="task2" class="task1">
-    <form class="">
+  <div class="framwork">
+    <form>
       <h2>以下にお答え下さい</h2>
       <div>
         <p>現在、生命保険に加入されていますか？</p>
@@ -8,16 +8,16 @@
           ><input
             type="radio"
             value="yes"
-            v-model="pickedResult1"
-            v-on:change="showQuestion2 = true"
+            v-model="pickedFirst"
+            v-on:change="questionSecond = true"
           />はい</label
         >
         <label
           ><input
             type="radio"
             value="no"
-            v-model="pickedResult1"
-            v-on:change="showQuestion2 = true"
+            v-model="pickedFirst"
+            v-on:change="questionSecond = true"
           />いいえ</label
         >
       </div>
@@ -29,16 +29,16 @@
           ><input
             type="radio"
             value="yes"
-            v-model="pickedResult2"
-            v-on:change="showQuestion3 = true"
+            v-model="pickedSecond"
+            v-on:change="questionThird = true"
           />はい</label
         >
         <label
           ><input
             type="radio"
             value="no"
-            v-model="pickedResult2"
-            v-on:change="showQuestion3 = true"
+            v-model="pickedSecond"
+            v-on:change="questionThird = true"
           />いいえ</label
         >
       </div>
@@ -47,25 +47,25 @@
           過去５年以内に、病気やけがで、手術をうけたことまたは継続して７日以上の入院をしたことがありますか？
         </p>
         <label
-          ><input type="radio" value="yes" v-model="pickedResult3" />はい</label
+          ><input type="radio" value="yes" v-model="pickedThird" />はい</label
         >
         <label
           ><input
             type="radio"
             value="no"
-            v-model="pickedResult3"
+            v-model="pickedThird"
           />いいえ</label
         >
       </div>
     </form>
 
     <router-link to="Basic">
-      <button class="task2Botton">
+      <button>
         前へ戻る
       </button>
     </router-link>
     <router-link to="Consultation">
-      <button class="task2Botton">
+      <button>
         次へ進む
       </button>
     </router-link>
@@ -79,12 +79,12 @@ export default {
   },
   data() {
     return {
-      showQuestion2: false,
-      showQuestion3: false,
+      questionSecond: false,
+      questionThird: false,
       showResult: false,
-      pickedResult1: "",
-      pickedResult2: "",
-      pickedResult3: ""
+      pickedFirst: "",
+      pickedSecond: "",
+      pickedThird: ""
     };
   }
 };

@@ -1,6 +1,6 @@
 <template>
-  <div id="task2" class="">
-    <form class="">
+  <div>
+    <form>
       <h2>お客様の情報を入力してください</h2>
       <p>-性別-</p>
       <label><input type="radio" value="male" v-model="picked" />男性</label>
@@ -23,7 +23,7 @@
       >日
     </form>
     <router-link to="Questionnaire">
-      <button class="task2Botton">
+      <button>
         次へ進む
       </button>
     </router-link>
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style>
-.task1 {
+.framwork {
   border: 1px solid;
   border-color: aquamarine;
 }
