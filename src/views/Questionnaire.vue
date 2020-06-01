@@ -5,7 +5,11 @@
       <div>
         <p>現在、生命保険に加入されていますか？</p>
         <label
-          ><input
+          >
+          <!-- アンケートの問いに答えて、初めて次の問いが表示する
+          ラジオボタンが変化した時に、falseが入っていたquestionSecondに
+          trueを代入する -->
+          <input
             type="radio"
             value="yes"
             v-model="pickedFirst"
