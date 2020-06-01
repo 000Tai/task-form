@@ -6,17 +6,17 @@
       <label><input type="radio" value="male" v-model="picked" />男性</label>
       <label><input type="radio" value="female" v-model="picked" />女性</label>
       <p>-生年月日-</p>
-      <select v-model="year" v-on:change="get_days">
+      <select v-model="year" @change="get_days">
         <option v-for="n in 50" v-bind:key="n.id">
           {{ n + 1959 }}
         </option> </select
       >年
-      <select v-model="month" v-on:change="get_days">
+      <select v-model="month" @change="get_days">
         <option v-for="n in 12" v-bind:key="n.id">
           {{ n }}
         </option> </select
       >月
-      <select v-model="day" v-on:change="get_days">
+      <select v-model="day" @change="get_days">
         <option v-for="n in days_max" v-bind:key="n.id">
           {{ n }}
         </option> </select

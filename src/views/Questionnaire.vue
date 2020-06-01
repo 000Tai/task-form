@@ -9,7 +9,7 @@
             type="radio"
             value="yes"
             v-model="pickedFirst"
-            v-on:change="questionSecond = true"
+            @change="questionSecond = true"
           />はい</label
         >
         <label
@@ -17,11 +17,11 @@
             type="radio"
             value="no"
             v-model="pickedFirst"
-            v-on:change="questionSecond = true"
+            @change="questionSecond = true"
           />いいえ</label
         >
       </div>
-      <div v-if="showQuestion2">
+      <div v-if="questionSecond">
         <p>
           現在入院中ですか。または、最近３ヶ月以内に医師の診察・検査の結果、入院・手術をすすめられたことはありますか？
         </p>
@@ -30,7 +30,7 @@
             type="radio"
             value="yes"
             v-model="pickedSecond"
-            v-on:change="questionThird = true"
+            @change="questionThird = true"
           />はい</label
         >
         <label
@@ -38,11 +38,11 @@
             type="radio"
             value="no"
             v-model="pickedSecond"
-            v-on:change="questionThird = true"
+            @change="questionThird = true"
           />いいえ</label
         >
       </div>
-      <div v-if="showQuestion3">
+      <div v-if="questionThird">
         <p>
           過去５年以内に、病気やけがで、手術をうけたことまたは継続して７日以上の入院をしたことがありますか？
         </p>

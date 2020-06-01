@@ -12,12 +12,12 @@
       ></textarea>
     </form>
     <router-link to="Questionnaire">
-      <button class="task2Botton">
+      <button>
         前へ戻る
       </button>
     </router-link>
     <router-link to="Consultation">
-      <button class="task2Botton">
+      <button>
         次へ進む
       </button>
     </router-link>
